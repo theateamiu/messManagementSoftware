@@ -2,9 +2,7 @@
 <resources>
 
     <string name="app_name">MMS</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
 
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
@@ -19,5 +17,12 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
 
+    <string name="try_again">Try Again</string>
+    <string name="register">Register</string>
+    <string name="try_again_message">If you are not registered, register first then login</string>
+    <string name="forgot_password">If you forgot your password, go with settings menu</string>
+
+
+    <string name="settings">Settings</string>
 
 </resources>
