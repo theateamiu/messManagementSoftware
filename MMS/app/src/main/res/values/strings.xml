@@ -24,5 +24,21 @@
 
 
     <string name="settings">Settings</string>
+    <string name="preference_name_manager">manager_registration</string>
+    <string name="preference_name_mess">mess_registration</string>
+    <string name="preference_key_manager">manager_key</string>
+    <string name="preference_key_boarder">boarder_key</string>
+
+    <string-array name="blood_groups">
+        <item><b>O<sup>-</sup></b></item>
+        <item><b>O<sup>+</sup></b></item>
+        <item><b>A<sup>-</sup></b></item>
+        <item><b>A<sup>+</sup></b></item>
+        <item><b>B<sup>-</sup></b></item>
+        <item><b>B<sup>+</sup></b></item>
+        <item><b>AB<sup>-</sup></b></item>
+        <item><b>AB<sup>+</sup></b></item>
+    </string-array>
+
 
 </resources>

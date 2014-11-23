@@ -69,7 +69,7 @@ public class LoginActivity extends FragmentActivity {
             }
         });
 
-        sharedPreferences = getSharedPreferences(SettingsActivity.MANAGER_PREF_NAME,MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(getString(R.string.preference_name_manager),MODE_PRIVATE);
     }
 
     private void attemptLogin() {

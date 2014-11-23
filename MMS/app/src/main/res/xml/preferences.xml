@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<Preference
+    android:key="@string/preference_key_manager"
+    android:title="Manager Profile"
+    android:summary="Register a manager for the mess.">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:targetClass="com.theateamiu.mms.ManagerActivity"
+        android:targetPackage="com.theateamiu.mms"/>
+</Preference>
 
 </PreferenceScreen>

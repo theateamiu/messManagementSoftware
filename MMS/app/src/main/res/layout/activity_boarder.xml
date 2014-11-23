@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".controllers.BoarderActivity"
+    android:padding="2dp">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:id="@+id/ivBoarder"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/content_picture" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etBoarderName"
+        android:layout_alignTop="@+id/ivBoarder"
+        android:layout_toRightOf="@+id/ivBoarder"
+        android:layout_toEndOf="@+id/ivBoarder"
+        android:hint="Enter Name" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etBoarderPhoneNo"
+        android:layout_below="@+id/etBoarderName"
+        android:layout_toRightOf="@+id/ivBoarder"
+        android:layout_toEndOf="@+id/ivBoarder"
+        android:hint="Phone Number" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/etBoarderEmail"
+        android:layout_below="@+id/ivBoarder"
+        android:layout_alignLeft="@+id/ivBoarder"
+        android:layout_alignStart="@+id/ivBoarder"
+        android:hint="Email Address" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etBoarderProfession"
+        android:layout_below="@+id/etBoarderEmail"
+        android:layout_alignLeft="@+id/etBoarderEmail"
+        android:layout_alignStart="@+id/etBoarderEmail"
+        android:hint="Profession" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etDateOfBirth"
+        android:layout_below="@+id/etBoarderProfession"
+        android:layout_alignLeft="@+id/etBoarderProfession"
+        android:layout_alignStart="@+id/etBoarderProfession"
+        android:hint="Date of birth [YYYY-MM-DD]" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood Group:"
+        android:id="@+id/tvBloodGroup"
+        android:layout_below="@+id/etDateOfBirth"
+        android:layout_alignLeft="@+id/etDateOfBirth"
+        android:layout_alignStart="@+id/etDateOfBirth" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerBloodGroup"
+        android:layout_alignTop="@+id/tvBloodGroup"
+        android:layout_toRightOf="@+id/tvBloodGroup"
+        android:layout_toEndOf="@+id/tvBloodGroup"
+        android:entries="@array/blood_groups"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/bSaveBoarder"
+        android:layout_below="@+id/etDateOfBirth"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
