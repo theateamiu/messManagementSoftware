@@ -11,16 +11,40 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".settings.SettingsActivity"
+            android:label="@string/settings"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".dao.ManagerDAOImpl"
+            android:label="Manager Registration"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".settings.BoarderActivity"
+            android:label="Boarder Registration"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".dao.MessListActivity">
 
-        <activity android:name=".settings.SettingsActivity"
-            android:label="@string/settings">
         </activity>
+        <activity android:name=".dao.MessRegistrationActivity">
+
+        </activity>
+        <activity android:name=".constituents.BoarderListActivity">
+
+        </activity>
+        <activity android:name=".SummaryActivity">
+
+        </activity>
+
+        
     </application>
 
 </manifest>
