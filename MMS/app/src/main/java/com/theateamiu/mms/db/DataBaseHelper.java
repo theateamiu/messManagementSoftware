@@ -7,13 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.sql.SQLException;
 
-public class DatabaseHelper {
+public class DataBaseHelper {
     private static final String DB_NAME = "mms";
     private static final int DB_VER = 1;
     private DatabaseOpenHelper databaseOpenHelper=null;
     private Context context;
 
-    public DatabaseHelper(Context context){
+    public DataBaseHelper(Context context){
         this.context = context;
     }
 
