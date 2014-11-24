@@ -2,6 +2,7 @@ package com.theateamiu.mms.models;
 
 
 public class Manager {
+    public static final String DEFAULT_VALUE="";
     public static final String MANAGER_NAME = "manager_name";
     public static final String MANAGER_AGE = "manager_age";
     public static final String MANAGER_PHONE_NO = "manager_phone_no";

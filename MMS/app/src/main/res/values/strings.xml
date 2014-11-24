@@ -28,6 +28,7 @@
     <string name="preference_name_mess">mess_registration</string>
     <string name="preference_key_manager">manager_key</string>
     <string name="preference_key_boarder">boarder_key</string>
+    <string name="preference_key_mess">mess_registration_key</string>
 
     <string-array name="blood_groups">
         <item><b>O<sup>-</sup></b></item>

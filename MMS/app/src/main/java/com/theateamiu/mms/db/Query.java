@@ -11,4 +11,6 @@ public class Query {
             Column.REGION+" text,"+
             Column.DATE_START+" text,"+
             Column.DATE_END+" text);";
+
+
 }

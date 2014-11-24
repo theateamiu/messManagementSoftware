@@ -11,31 +11,29 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
         <activity android:name=".settings.SettingsActivity"
             android:label="@string/settings"
             android:screenOrientation="portrait">
+
         </activity>
-        <activity android:name=".dao.ManagerDAOImpl"
+        <activity android:name=".settings.ManagerRegistrationActivity"
             android:label="Manager Registration"
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".settings.BoarderActivity"
             android:label="Boarder Registration"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".dao.MessListActivity">
-
-        </activity>
-        <activity android:name=".dao.MessRegistrationActivity">
-
+        <activity android:name=".settings.MessRegistrationActivity"
+            android:label="Mess Registration">
         </activity>
         <activity android:name=".constituents.BoarderListActivity">
 
@@ -44,6 +42,10 @@
 
         </activity>
 
+        <activity android:name=".constituents.ManagerialListActivity"
+            android:label="Managerial List">
+
+        </activity>
 
     </application>
 

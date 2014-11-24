@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".constituents.ManagerialListActivity">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="72dp"
+        android:id="@+id/ivListViewRowManagerial"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ranking"
+        android:id="@+id/tvListViewRowManagerialRank"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/ivListViewRowManagerial"
+        android:hint="Mess Rank" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mess Name"
+        android:id="@+id/tvListViewRowManagerialName"
+        android:layout_toEndOf="@+id/ivListViewRowManagerial"
+        android:hint="Mess Name"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivListViewRowManagerial"
+        android:layout_toLeftOf="@+id/tvListViewRowManagerialRank"
+        android:layout_toStartOf="@+id/tvListViewRowManagerialRank" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Managerial Duration"
+        android:id="@+id/tvListViewRowManagerialDuration"
+        android:layout_below="@+id/tvListViewRowManagerialName"
+        android:layout_toRightOf="@+id/ivListViewRowManagerial"
+        android:layout_toEndOf="@+id/ivListViewRowManagerial"
+        android:layout_alignBottom="@+id/ivListViewRowManagerial"
+        android:layout_toLeftOf="@+id/tvListViewRowManagerialRank"
+        android:layout_toStartOf="@+id/tvListViewRowManagerialRank"
+        android:hint="Managerial Duration" />
+
+</RelativeLayout>

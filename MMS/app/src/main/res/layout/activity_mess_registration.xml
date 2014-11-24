@@ -1,80 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".dao.MessRegistrationActivity">
-
-    <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="2dp"
-        >
+    tools:context=".settings.MessRegistrationActivity">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/ivMess"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/content_picture" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/ivMess"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/content_picture"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etMessName"
-            android:layout_gravity="center_horizontal"
-            android:hint="Enter Mess Name" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/etMessName"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter Mess Name"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:id="@+id/etMessPostalAddress"
-            android:layout_gravity="center_horizontal"
-            android:hint="Postal Address" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/etMessPostalAddress"
+        android:layout_gravity="center_horizontal"
+        android:hint="Postal Address"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etMessDistrict"
-            android:layout_gravity="center_horizontal"
-            android:hint="District" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/etMessDistrict"
+        android:layout_gravity="center_horizontal"
+        android:hint="District"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etMessRegion"
-            android:layout_gravity="center_horizontal"
-            android:hint="Region" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/etMessRegion"
+        android:layout_gravity="center_horizontal"
+        android:hint="Region"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:ems="10"
-            android:id="@+id/etStartDate"
-            android:layout_gravity="center_horizontal"
-            android:hint="Start Date [YYYY-MM-DD]" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etStartDate"
+        android:layout_gravity="center_horizontal"
+        android:hint="Start Date [YYYY-MM-DD]"
+        android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:ems="10"
-            android:id="@+id/etEndDate"
-            android:layout_gravity="center_horizontal"
-            android:hint="End   Date [YYYY-MM-DD]" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etEndDate"
+        android:layout_gravity="center_horizontal"
+        android:hint="End   Date [YYYY-MM-DD]"
+        android:layout_weight="1" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:id="@+id/bSaveMess"
-            android:layout_gravity="center_horizontal" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Save"
+        android:id="@+id/bSaveMess"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
 
-    </LinearLayout>
 
-    </ScrollView>
+</LinearLayout>

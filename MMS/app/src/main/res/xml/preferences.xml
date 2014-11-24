@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-<Preference
-    android:key="@string/preference_key_manager"
-    android:title="Manager Profile"
-    android:summary="Register a manager for the mess.">
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:targetClass="com.theateamiu.mms.ManagerActivity"
-        android:targetPackage="com.theateamiu.mms"/>
-</Preference>
+
+    <PreferenceCategory android:title="Registrations">
+        <Preference
+            android:key="mess_registration_key"
+            android:title="Mess Registration"
+            android:summary="Register your mess and managerial first">
+            <intent
+                android:targetPackage="com.theateamiu.mms"
+                android:targetClass="com.theateamiu.mms.settings.MessRegistrationActivity"
+                android:action="android.intent.action.VIEW" />
+        </Preference>
+
+        <Preference
+            android:key="@string/preference_key_manager"
+            android:title="Manager Registration"
+            android:summary="Register a manager">
+
+            <intent
+                android:targetPackage="com.theateamiu.mms"
+                android:targetClass="com.theateamiu.mms.settings.ManagerRegistrationActivity"
+                android:action="android.intent.action.VIEW"/>
+        </Preference>
+
+        <Preference
+            android:key="boarder_key"
+            android:title="Boarder Registration"
+            android:summary="Register boarder's...">
+
+            <intent
+                android:targetPackage="com.theateamiu.mms"
+                android:targetClass="com.theateamiu.mms.settings.BoarderActivity"
+                android:action="android.intent.action.VIEW" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <!--TODO: Mess criteria settings preference screen -->
+    <!--TODO: Bill's preference screen -->
 
 </PreferenceScreen>

@@ -17,6 +17,13 @@ public class BoarderActivity extends Activity implements BoarderDAO,View.OnClick
         setContentView(R.layout.activity_boarder);
     }
 
+
+
+    @Override
+    public void onClick(View view) {
+
+    }
+
     @Override
     public void setBoarder(Boarder boarder) {
 
@@ -35,10 +42,5 @@ public class BoarderActivity extends Activity implements BoarderDAO,View.OnClick
     @Override
     public List<Boarder> getAllBoarders() {
         return null;
-    }
-
-    @Override
-    public void onClick(View view) {
-
     }
 }

@@ -20,6 +20,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.theateamiu.mms.constituents.ManagerialListActivity;
+import com.theateamiu.mms.models.Manager;
 import com.theateamiu.mms.settings.SettingsActivity;
 
 public class LoginActivity extends FragmentActivity {
@@ -136,8 +138,8 @@ public class LoginActivity extends FragmentActivity {
             String storedEmail=null,storedPassword=null;
 
             try{
-                storedEmail = sharedPreferences.getString("email","");
-                storedPassword = sharedPreferences.getString("password","");
+                storedEmail = sharedPreferences.getString(Manager.MANAGER_EMAIL,Manager.DEFAULT_VALUE);
+                storedPassword = sharedPreferences.getString(Manager.MANAGER_PASSWORD,Manager.DEFAULT_VALUE);
                 Thread.sleep(1000);
             }catch(InterruptedException e){
                 return false;
@@ -146,8 +148,6 @@ public class LoginActivity extends FragmentActivity {
             if(storedEmail.equals(email)){
                 return storedPassword.equals(password);
             }
-
-            // TODO: register the new account here.
 
             return false;
         }
@@ -158,6 +158,8 @@ public class LoginActivity extends FragmentActivity {
             showProgress(false);
 
             if (success) {
+                Intent intent = new Intent(LoginActivity.this, ManagerialListActivity.class);
+                startActivity(intent);
                 finish();
             } else {
                 //mPasswordView.setError(getString(R.string.error_incorrect_password));

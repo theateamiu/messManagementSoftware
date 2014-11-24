@@ -1,4 +1,4 @@
-package com.theateamiu.mms.dao;
+package com.theateamiu.mms.settings;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.theateamiu.mms.R;
 import com.theateamiu.mms.models.Manager;
 
-public class ManagerDAOImpl extends Activity implements View.OnClickListener {
-    public static final String DEFAULT_VALUE="No Value";
+public class ManagerRegistrationActivity extends Activity implements View.OnClickListener {
     Manager manager;
     SharedPreferences sharedPreferences;
 
@@ -86,19 +86,20 @@ public class ManagerDAOImpl extends Activity implements View.OnClickListener {
         editor.putString(Manager.MANAGER_PASSWORD,etPassword.getText().toString());
 
         editor.commit();
-
+        Toast.makeText(ManagerRegistrationActivity.this,"Saved Successfully!",Toast.LENGTH_LONG).show();
+        finish();
     }
 
     private void loadManagerFromPreference() {
         //TODO set Image URL
-        manager.setName(sharedPreferences.getString(Manager.MANAGER_NAME,DEFAULT_VALUE));
+        manager.setName(sharedPreferences.getString(Manager.MANAGER_NAME,Manager.DEFAULT_VALUE));
         manager.setAge(Integer.parseInt(sharedPreferences.
                 getString(Manager.MANAGER_AGE, "0")));
-        manager.setPhoneNo(sharedPreferences.getString(Manager.MANAGER_PHONE_NO,DEFAULT_VALUE));
-        manager.setEmail(sharedPreferences.getString(Manager.MANAGER_EMAIL,DEFAULT_VALUE));
-        manager.setProfession(sharedPreferences.getString(Manager.MANAGER_PROFESSION,DEFAULT_VALUE));
-        manager.setAddress(sharedPreferences.getString(Manager.MANAGER_ADDRESS,DEFAULT_VALUE));
-        manager.setPassword(sharedPreferences.getString(Manager.MANAGER_PASSWORD,DEFAULT_VALUE));
+        manager.setPhoneNo(sharedPreferences.getString(Manager.MANAGER_PHONE_NO,Manager.DEFAULT_VALUE));
+        manager.setEmail(sharedPreferences.getString(Manager.MANAGER_EMAIL,Manager.DEFAULT_VALUE));
+        manager.setProfession(sharedPreferences.getString(Manager.MANAGER_PROFESSION,Manager.DEFAULT_VALUE));
+        manager.setAddress(sharedPreferences.getString(Manager.MANAGER_ADDRESS,Manager.DEFAULT_VALUE));
+        manager.setPassword(sharedPreferences.getString(Manager.MANAGER_PASSWORD,Manager.DEFAULT_VALUE));
     }
 
 
