@@ -76,5 +76,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="1" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:id="@+id/bShowMess"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
 
 </LinearLayout>

@@ -16,7 +16,7 @@ public class Column {
     public static final String DISTRICT = "district";
     public static final String REGION = "region";
 
-    public static final String MESS_NAME = "mess_name";
+    //public static final String MESS_NAME = "mess_name";
     public static final String MANAGERIAL_ID = "mng_id";
 
     public static final String BALANCE = "balance";
@@ -26,4 +26,8 @@ public class Column {
     public static final String IS_DONE = "is_done";
 
     public static final String ITEM = "item";
+
+    public static final String RANK_IN_DIST = "dist_rank";
+    public static final String RANK_IN_COUNTRY = "country_rank";
+    public static final String EMAIL_MANAGER = "email_manager";
 }

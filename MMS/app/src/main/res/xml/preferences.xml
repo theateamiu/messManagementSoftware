@@ -3,15 +3,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="Registrations">
-        <Preference
-            android:key="mess_registration_key"
-            android:title="Mess Registration"
-            android:summary="Register your mess and managerial first">
-            <intent
-                android:targetPackage="com.theateamiu.mms"
-                android:targetClass="com.theateamiu.mms.settings.MessRegistrationActivity"
-                android:action="android.intent.action.VIEW" />
-        </Preference>
 
         <Preference
             android:key="@string/preference_key_manager"
@@ -23,9 +14,18 @@
                 android:targetClass="com.theateamiu.mms.settings.ManagerRegistrationActivity"
                 android:action="android.intent.action.VIEW"/>
         </Preference>
+        <Preference
+            android:key="@string/preference_key_mess"
+            android:title="Mess Registration"
+            android:summary="Register your mess and managerial first">
+            <intent
+                android:targetPackage="com.theateamiu.mms"
+                android:targetClass="com.theateamiu.mms.settings.MessRegistrationActivity"
+                android:action="android.intent.action.VIEW" />
+        </Preference>
 
         <Preference
-            android:key="boarder_key"
+            android:key="@string/preference_key_boarder"
             android:title="Boarder Registration"
             android:summary="Register boarder's...">
 

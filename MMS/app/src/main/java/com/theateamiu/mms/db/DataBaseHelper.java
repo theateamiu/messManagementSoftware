@@ -25,12 +25,13 @@ public class DatabaseHelper {
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+            sqLiteDatabase.execSQL(Query.CREATE_TABLE_MESS);
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
-
+            sqLiteDatabase.execSQL(Query.DROP_TABLE_MESS);
+            onCreate(sqLiteDatabase);
         }
     }//end class DatabaseOpenHelper
 
