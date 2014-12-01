@@ -8,5 +8,4 @@ public class Table {
     public static  final String MEALS = "meals";
     public static  final String BAZAAR = "bazaar";
     public static  final String EXTRA = "extra";
-
 }

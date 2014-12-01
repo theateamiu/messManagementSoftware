@@ -31,14 +31,14 @@
     <string name="preference_key_mess">mess_registration_key</string>
 
     <string-array name="blood_groups">
-        <item><b>O<sup>-</sup></b></item>
-        <item><b>O<sup>+</sup></b></item>
-        <item><b>A<sup>-</sup></b></item>
-        <item><b>A<sup>+</sup></b></item>
-        <item><b>B<sup>-</sup></b></item>
-        <item><b>B<sup>+</sup></b></item>
-        <item><b>AB<sup>-</sup></b></item>
-        <item><b>AB<sup>+</sup></b></item>
+        <item>O-</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>A+</item>
+        <item>B-</item>
+        <item>B+</item>
+        <item>AB-</item>
+        <item>AB+</item>
     </string-array>
 
 

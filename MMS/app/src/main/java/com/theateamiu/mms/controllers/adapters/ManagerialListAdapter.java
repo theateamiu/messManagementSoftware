@@ -1,75 +1,80 @@
-package com.theateamiu.mms.constituents.adapters;
+package com.theateamiu.mms.controllers.adapters;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.theateamiu.mms.R;
-import com.theateamiu.mms.constituents.listsrowmodels.Managerial;
+import com.theateamiu.mms.models.Managerial;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.List;
 
 
 public class ManagerialListAdapter  extends ArrayAdapter<Managerial>{
     private Context context;
-    private LayoutInflater layoutInflater;
     private List<Managerial> managerialList;
 
     public ManagerialListAdapter(Context context,List<Managerial> managerialList) {
-        super(context, R.layout.listview_row_managerial, R.id.tvListViewRowManagerName, managerialList);
+        super(context, R.layout.listview_row_managerial, R.id.tvListViewRowManagerialName, managerialList);
 
         this.context = context;
         this.managerialList= managerialList;
-        layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //checkList();
-    }
 
-    public void checkList(){
-        for(Managerial m: managerialList){
-            Toast.makeText(context,m.toString(), Toast.LENGTH_LONG).show();
-        }
     }
 
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = layoutInflater.inflate(R.layout.listview_row_managerial,parent,false);
+        View row = convertView;
+
+        if(row == null){
+            row = LayoutInflater.from(context).
+                    inflate(R.layout.listview_row_managerial, parent, false);
+        }
+
         ImageView imageView = (ImageView)row.findViewById(R.id.ivListViewRowManagerial);
         TextView tvName = (TextView)row.findViewById(R.id.tvListViewRowManagerialName);
         TextView tvRank = (TextView)row.findViewById(R.id.tvListViewRowManagerialRank);
         TextView tvDuration = (TextView)row.findViewById(R.id.tvListViewRowManagerialDuration);
 
-        Managerial managerial = managerialList.get(position);
+        Managerial managerial = getManagerial(position);
 
-        tvName.setText(managerial.name);
+        tvName.setText(managerial.getName());
 
-        String ranking = "DR: "+managerial.rankInDist+"\n"+"CR: "+managerial.rankInCountry;
+        String ranking = "DR: "+managerial.getRankInDist()+"\n"+"CR: "+managerial.getRankInCountry();
         tvRank.setText(ranking);
 
-        String duration = managerial.startDate+" to "+managerial.endDate;
+        String duration = managerial.getStartDate()+" to "+managerial.getEndDate();
         tvDuration.setText(duration);
 
-        // TODO: check imagePath parsing
-        /*
-        Uri imageUri = Uri.parse(managerial.imagePath);
+        Uri imageUri = Uri.parse(managerial.getImagePath());
         try {
-            InputStream is = context.getContentResolver().openInputStream(
-                    imageUri);
-            Drawable drawable = Drawable.createFromStream(is, "");
+            InputStream is = getContext().getContentResolver().openInputStream(imageUri);
+            Drawable drawable = Drawable.createFromStream(is,"");
             imageView.setImageDrawable(drawable);
         } catch (FileNotFoundException e) {
-            //Toast.makeText(context,e.toString(),Toast.LENGTH_LONG).show();
-        }//end try-catch
-*/
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.content_picture));
+        }
         return row;
     }//end method getView
 
     public Managerial getManagerial(int position){
         return managerialList.get(position);
+    }
+
+    class ViewHolder{
+        ImageView ivManagerial=null;
+
+        ViewHolder(View row){
+            ivManagerial = (ImageView)row.findViewById(R.id.ivListViewRowManagerial);
+        }
     }
 }

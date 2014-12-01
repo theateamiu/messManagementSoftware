@@ -1,4 +1,4 @@
-package com.theateamiu.mms;
+package com.theateamiu.mms.controllers;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,14 +19,17 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.theateamiu.mms.constituents.ManagerialListActivity;
+import com.theateamiu.mms.R;
+import com.theateamiu.mms.dao.ManagerDAO;
+import com.theateamiu.mms.dao.ManagerDAOImpl;
 import com.theateamiu.mms.models.Manager;
 import com.theateamiu.mms.settings.SettingsActivity;
 
 public class LoginActivity extends FragmentActivity {
 
     private UserLoginTask userLoginTask;
-
+    private ManagerDAO managerDAO;
+    private Manager manager;
     private String email,password;
 
     private EditText etEmail;
@@ -36,12 +38,13 @@ public class LoginActivity extends FragmentActivity {
     private View vLoginForm;
     private View vLoginStatus;
 
-    private SharedPreferences sharedPreferences;
+   // private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle(getString(R.string.title_activity_login));
         init();
     }
 
@@ -71,7 +74,8 @@ public class LoginActivity extends FragmentActivity {
             }
         });
 
-        sharedPreferences = getSharedPreferences(getString(R.string.preference_name_manager),MODE_PRIVATE);
+        //sharedPreferences = getSharedPreferences(getString(R.string.preference_name_manager),MODE_PRIVATE);
+        managerDAO = new ManagerDAOImpl(LoginActivity.this);
     }
 
     private void attemptLogin() {
@@ -138,8 +142,11 @@ public class LoginActivity extends FragmentActivity {
             String storedEmail=null,storedPassword=null;
 
             try{
-                storedEmail = sharedPreferences.getString(Manager.MANAGER_EMAIL,Manager.DEFAULT_VALUE);
-                storedPassword = sharedPreferences.getString(Manager.MANAGER_PASSWORD,Manager.DEFAULT_VALUE);
+                //storedEmail = sharedPreferences.getString(ManagerDAO.MANAGER_EMAIL,ManagerDAO.DEFAULT_VALUE);
+                //storedPassword = sharedPreferences.getString(ManagerDAO.MANAGER_PASSWORD,ManagerDAO.DEFAULT_VALUE);
+                manager = managerDAO.getManagerFromSharedPreferences();
+                storedEmail = manager.getEmail();
+                storedPassword = manager.getPassword();
                 Thread.sleep(1000);
             }catch(InterruptedException e){
                 return false;

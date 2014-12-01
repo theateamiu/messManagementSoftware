@@ -7,13 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.sql.SQLException;
 
-public class DataBaseHelper {
+public class DatabaseHelper {
     private static final String DB_NAME = "mms";
     private static final int DB_VER = 1;
     private DatabaseOpenHelper databaseOpenHelper=null;
     private Context context;
 
-    public DataBaseHelper(Context context){
+    public DatabaseHelper(Context context){
         this.context = context;
     }
 
@@ -26,11 +26,13 @@ public class DataBaseHelper {
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
             sqLiteDatabase.execSQL(Query.CREATE_TABLE_MESS);
+            sqLiteDatabase.execSQL(Query.CREATE_TABLE_BOARDERS);
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
             sqLiteDatabase.execSQL(Query.DROP_TABLE_MESS);
+            sqLiteDatabase.execSQL(Query.DROP_TABLE_BOARDERS);
             onCreate(sqLiteDatabase);
         }
     }//end class DatabaseOpenHelper

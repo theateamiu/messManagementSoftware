@@ -1,13 +1,27 @@
 package com.theateamiu.mms.models;
 
-public class Boarder {
+import java.io.Serializable;
+
+public class Boarder implements Serializable{
+    private static final long serialVersionUID = 1L;
+    //public static final int NO_PROPERTIES = 8;
     private String name;
     private String phoneNo;
     private String email;
     private String profession;
-    private int age;
+    private String dateOfBirth;
+    private String bloodGroup;
     private String imageURL;
-    private String managerialID;
+    private long managerialID;
+
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
 
     public String getName() {
         return name;
@@ -41,12 +55,12 @@ public class Boarder {
         this.profession = profession;
     }
 
-    public int getAge() {
-        return age;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getImageURL() {
@@ -57,13 +71,21 @@ public class Boarder {
         this.imageURL = imageURL;
     }
 
-    public String getManagerialID() {
+    public long getManagerialID() {
         return managerialID;
     }
 
-    public void setManagerialID(String managerialID) {
+    public void setManagerialID(long managerialID) {
         this.managerialID = managerialID;
     }
 
 
+    @Override
+    public String toString() {
+
+        return "Name: "+name+"\n"+
+                "PhoneNo: "+phoneNo+"\n"+
+                "ImageURI: "+imageURL+"\n"+
+                "BG: "+bloodGroup;
+    }
 }

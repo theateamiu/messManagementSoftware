@@ -6,10 +6,10 @@ import com.theateamiu.mms.models.Boarder;
 import java.util.List;
 
 public interface BoarderDAO {
-    public void setBoarder(Boarder boarder);
+    public void setBoarderToDB(Boarder boarder);
 
-    public Boarder getBoarder(String phoneNo);
-    public boolean updateBoarder(long id);
+    public Boarder getBoarderFromDB(String phoneNo);
+    public boolean updateBoarderToDB(long id);
 
-    public List<Boarder> getAllBoarders();
+    public List<Boarder> getAllBoardersFromDB();
 }

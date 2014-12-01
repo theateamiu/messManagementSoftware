@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_boarder_list"
+        android:title="Boarders"
+        android:showAsAction="never"/>
+    <item
+        android:id="@+id/action_account_list"
+        android:title="Accounts"
+        android:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_meal_list"
+        android:title="Meals"
+        android:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_bazaar_list"
+        android:title="Bazaars"
+        android:showAsAction="never"/>
+    <item
+        android:id="@+id/action_extra_list"
+        android:title="Extras"
+        android:showAsAction="never"/>
+    <item
+        android:id="@+id/action_bill_list"
+        android:title="Bills"
+        android:showAsAction="never"/>
+    <item
+        android:id="@+id/action_settings_list"
+        android:title="Settings"
+        android:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_contribution_list"
+        android:title="Contributions"
+        android:showAsAction="never"/>
+
+</menu>

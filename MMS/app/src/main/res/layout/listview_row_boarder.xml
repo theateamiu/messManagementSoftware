@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="2dp"
-    tools:context=".constituents.ManagerialListActivity">
+    android:padding="10dp"
+    tools:context=".constituents.BoarderListActivity">
 
     <ImageView
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:id="@+id/ivListViewRowManagerial"
+        android:id="@+id/ivListViewRowBoarder"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -21,39 +21,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Ranking"
-        android:id="@+id/tvListViewRowManagerialRank"
+        android:text="Info"
+        android:id="@+id/tvListViewRowBoarderInfo"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/ivListViewRowManagerial"
-        android:hint="Mess Rank" />
+        android:layout_alignBottom="@+id/ivListViewRowBoarder"
+        android:hint="Boarder Info" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Mess Name"
-        android:id="@+id/tvListViewRowManagerialName"
-        android:layout_toEndOf="@+id/ivListViewRowManagerial"
-        android:hint="Mess Name"
+        android:text="Boarder Name"
+        android:id="@+id/tvListViewRowBoarderName"
+        android:layout_toRightOf="@+id/ivListViewRowBoarder"
+        android:hint="Boarder Name"
+        android:layout_toStartOf="@+id/tvListViewRowBoarderInfo"
+        android:layout_toLeftOf="@+id/tvListViewRowBoarderInfo"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/ivListViewRowManagerial"
-        android:layout_toLeftOf="@+id/tvListViewRowManagerialRank"
-        android:layout_toStartOf="@+id/tvListViewRowManagerialRank" />
+        android:layout_alignLeft="@+id/tvListViewRowBoarderContact"
+        android:layout_alignStart="@+id/tvListViewRowBoarderContact" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Managerial Duration"
-        android:id="@+id/tvListViewRowManagerialDuration"
-        android:layout_below="@+id/tvListViewRowManagerialName"
-        android:layout_toRightOf="@+id/ivListViewRowManagerial"
-        android:layout_toEndOf="@+id/ivListViewRowManagerial"
-        android:layout_alignBottom="@+id/ivListViewRowManagerial"
-        android:layout_toLeftOf="@+id/tvListViewRowManagerialRank"
-        android:layout_toStartOf="@+id/tvListViewRowManagerialRank"
-        android:hint="Managerial Duration" />
+        android:text="Boarder Contact"
+        android:id="@+id/tvListViewRowBoarderContact"
+        android:layout_toRightOf="@+id/ivListViewRowBoarder"
+        android:layout_toEndOf="@+id/ivListViewRowBoarder"
+        android:layout_alignBottom="@+id/ivListViewRowBoarder"
+        android:layout_toLeftOf="@+id/tvListViewRowBoarderInfo"
+        android:layout_toStartOf="@+id/tvListViewRowBoarderInfo"
+        android:hint="Boarder Contact" />
 
 </RelativeLayout>
