@@ -195,6 +195,7 @@ public class ManagerRegistrationActivity extends Activity implements View.OnClic
 
         if(cancel){
             focusView.requestFocus();
+            return false;
         }
 
         return true;
