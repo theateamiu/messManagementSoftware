@@ -6,9 +6,10 @@
 <head lang="en">
 <meta charset="UTF-8" />
 <title>Baro Bazar</title>
-
+	<jsp:include page="WEB-INF/views/fragments/headTag.jsp"/>
 </head>
 <body>
 <h2 align="center">Welcome to Baro Bazar</h2>
+<jsp:include page="WEB-INF/views/fragments/menuBar.jsp"/>
 </body>
 </html>
